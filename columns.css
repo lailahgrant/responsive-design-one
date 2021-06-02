@@ -1,0 +1,116 @@
+body{
+	/*box-sizing: border-box;*/
+	font-size: 1.125rem;
+	color: #707070;
+	margin: 0;
+	background: pink;
+}
+
+
+
+/*layout*/
+.container{
+	max-width: 980px;
+	/*max-width:1200px;*/
+	margin: 0 auto;
+}
+
+.row{
+	display: flex;
+	/*spacing out the columns - flexbox has *justify-content* */
+	justify-content: space-between; /*evenly distributes space left if columns are leaving space on the width*/
+	/*justify-content: space-evenly; justify-content: space-around*/
+	margin: 1em 0; 
+
+}
+
+img{
+	max-width: 100%;
+	/*width: 100%;*/
+}
+
+
+/*typography*/
+h1{
+	font-size: 3rem; 
+	color: #212614;
+	text-align: center;
+}
+
+h1 span { /*compound selector - no class added to span, span was selected on its own*/
+	color: #B7832F;
+}
+
+h2{
+	font-size: 1.5rem;
+}
+
+p{
+	margin-top: 0;
+}
+
+.col-bg{
+	background: #212614;
+	color: #fff;
+	padding: 1em;
+}
+
+.col-1{
+	width: 20%;
+}
+.col-2{
+	width: 50%;
+}
+
+.col-3{
+	width: 70%;
+}
+
+
+/*Media queries*/
+/*max-width is 600px and smaller*/
+@media (max-width: 600px){
+	.row{
+		flex-direction: column; /*turns the display: flex that's column to row [everything gets stacked on eachother ]*/
+	}
+	
+	/*change all the col-* widths to 100% inorder to get rid of the space  */
+	.col-1, .col-2, .col-3 {
+		width: 100%;
+	}
+
+}
+
+
+/*Contolling the vertical position of flex items -> align-items
+align-items: flex-start;  align-items:flex-end; align-items:center; align-items: baseline;*/
+
+/*
+Flexbox -  changing the axis around.
+flex-direction...
+display: flex; //creates columns//
+flex-direction: row; /default behavior/
+
+display: flex;
+flex-direction: column; /switches the axis/ - it will make it rows if they're columns
+even the justify-content and align-items will change axis
+justify-content will now work vertically - works on the main axis
+align-items will now work horizontally  - works on the cross axis
+*/
+
+/*Creating a Navigation
+use flex
+*/
+
+
+/*
+colors
+#212614  #B7832F  #707070  #FFF
+font sizes
+h1: 3rem;  h2: 1.5rem; body: 1.125rem;
+layout
+max-width: 980px;
+*/
+
+
+
